@@ -1,11 +1,14 @@
 #!/bin/bash
 i=1
-while [ $i -le 2 ]
+while ((i < 10000))
 do 
     cp ~/Desktop/*.png ~/pic/ 
+    cd ~/pic/
     git add .
+    git commit -m "a"
     git push
-    sleep 1m
+    ((i++))
+    sleep 30s
 done
 
 
